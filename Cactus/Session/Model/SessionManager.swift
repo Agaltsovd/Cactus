@@ -51,6 +51,9 @@ class SessionManager {
                 self.delegate.cancelTimeLeftChanged(secondsLeft: secondsLeft)
             }
         }
+        
+        cancelPlantingTimer?.start()
+        
     }
     
     func stopSession() {

@@ -89,6 +89,7 @@ class SessionViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
        
     func sessionDidStart(session: Session) {
         showTimeLeft(secondsLeft: session.durationInSeconds)
+        cancelTimeLeftChanged(secondsLeft: 10)
         
         
         pickerView.isHidden = true
@@ -103,7 +104,7 @@ class SessionViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         timeLabel.text = String(format: "%02d:%02d", secondsLeft/60,secondsLeft%60)
     }
     func showCancelTimeLeft(secondsLeft: Int){
-        cancelButton.setTitle("Cancel(\(secondsLeft)", for: .normal)
+        cancelButton.setTitle("Cancel(\(secondsLeft))", for: .normal)
     }
     
     func sessionTimeLeftChanged(secondsLeft: Int) {
