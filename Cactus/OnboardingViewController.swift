@@ -11,9 +11,9 @@ import UIKit
 class OnboardingViewController: UIViewController {
     let textArray = ["Next →","Start"]
     let topTextArray = ["Choose Cactus to Plant","Stay Focused and Productive"]
-    let image1 = UIImage(named: "image1")!
-    let image2 = UIImage(named: "image2")!
-    let image3 = UIImage(named: "image3")!
+    let image1 = UIImage(named: "Open Doodles")!
+    let image2 = UIImage(named: "plant")!
+    let image3 = UIImage(named: "onboarding_stay")!
     
     @IBOutlet weak var topText: UILabel!
     
