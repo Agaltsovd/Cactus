@@ -60,4 +60,8 @@ class SessionManager {
         sessionTimer?.stop()
         delegate.sessionDidCancel()
     }
+    func stopCancelTimer(){
+        cancelPlantingTimer?.stop()
+        
+    }
 }

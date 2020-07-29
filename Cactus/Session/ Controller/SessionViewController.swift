@@ -92,6 +92,7 @@ class SessionViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         cancelTimeLeftChanged(secondsLeft: 10)
         
         
+        
         pickerView.isHidden = true
         plantButton.isHidden = true
         
@@ -101,10 +102,15 @@ class SessionViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
     }
     func showTimeLeft(secondsLeft:Int){
+      
         timeLabel.text = String(format: "%02d:%02d", secondsLeft/60,secondsLeft%60)
     }
     func showCancelTimeLeft(secondsLeft: Int){
-        cancelButton.setTitle("Cancel(\(secondsLeft))", for: .normal)
+        UIView.performWithoutAnimation {
+           cancelButton.setTitle("Cancel(\(secondsLeft))", for: .normal)
+        }
+        
+        
     }
     
     func sessionTimeLeftChanged(secondsLeft: Int) {
@@ -123,6 +129,7 @@ class SessionViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func didTapCancelButton() {
         sessionManager.stopSession()
+        sessionManager.stopCancelTimer()
         pickerView.isHidden = false
         plantButton.isHidden = false
         giveUpButton.isHidden = true
