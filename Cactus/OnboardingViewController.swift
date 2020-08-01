@@ -21,6 +21,7 @@ class OnboardingViewController: UIViewController {
     
     @IBOutlet weak var varButton: UIButton!
     
+    @IBOutlet weak var pageControl: UIPageControl!
     
     var count:Int = 0
     
@@ -33,7 +34,9 @@ class OnboardingViewController: UIViewController {
             topText.text = topTextArray[count]
             imageVIew.image = arrayImages[count]
             
+            
             count+=1
+            pageControl.currentPage = count
         }
         else{
             var nextController: SessionViewController

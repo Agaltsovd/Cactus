@@ -49,6 +49,13 @@ Cactus App</string>
                                     <constraint firstAttribute="width" secondItem="BoX-hQ-bUm" secondAttribute="height" multiplier="336:297" id="qoc-eG-mP4"/>
                                 </constraints>
                             </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZYj-iU-TIW">
+                                <rect key="frame" x="188" y="799" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="greenColor"/>
+                                <color key="pageIndicatorTintColor" name="greyColor"/>
+                                <color key="currentPageIndicatorTintColor" name="greenColor"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" name="primaryColor"/>
                         <constraints>
@@ -66,6 +73,7 @@ Cactus App</string>
                     </view>
                     <connections>
                         <outlet property="imageVIew" destination="BoX-hQ-bUm" id="9cQ-dR-46q"/>
+                        <outlet property="pageControl" destination="ZYj-iU-TIW" id="Gsa-8X-5ws"/>
                         <outlet property="topText" destination="KaU-7G-ZtR" id="v0o-oa-pfH"/>
                         <outlet property="varButton" destination="SKQ-vf-lfi" id="W8A-Ln-BDj"/>
                         <segue destination="L1c-XB-uaC" kind="presentation" identifier="showSession" modalPresentationStyle="fullScreen" id="9DF-Gh-8FO"/>

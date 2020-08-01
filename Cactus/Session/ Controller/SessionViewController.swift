@@ -41,7 +41,7 @@ class SessionViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         let session = Session(durationInSeconds: selectedDuration, startDate: Date())
         sessionManager.startSession(session: session)
-        sessionManager.cancelPlanting()
+        sessionManager.cancelPlanting(session: session)
         
     }
     

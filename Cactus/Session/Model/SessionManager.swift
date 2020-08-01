@@ -45,9 +45,9 @@ class SessionManager {
         sessionTimer?.start()
         delegate.sessionDidStart(session: session)
     }
-    func cancelPlanting(){
+    func cancelPlanting(session: Session){
         cancelPlantingTimer = CountdownTimer(durationInSeconds: 10){ secondsLeft in
-            if secondsLeft == 0{
+            if ((secondsLeft == 0) && (session.durationInSeconds != 10)){
                 self.delegate.showGiveUpButton()
             }
             else{
