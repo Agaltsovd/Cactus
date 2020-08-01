@@ -15,6 +15,7 @@ protocol SessionManagerDelegate {
     func sessionDidEnd(session: Session)
     func sessionDidCancel()
     func showGiveUpButton()
+    func hideGiveUpButton()
 }
 
 class SessionManager {
@@ -30,9 +31,11 @@ class SessionManager {
     func startSession(session: Session) {
         sessionTimer = CountdownTimer(durationInSeconds: session.durationInSeconds) { secondsLeft in
             if secondsLeft == 0 {
-//                SessionsStorage.shared.addSession(session)
+                  SessionsStorage.shared.addSession(session: session)
 //                Balance.shared.addCoins(session.coinsCount)
                 self.delegate.sessionDidEnd(session: session)
+                self.delegate.hideGiveUpButton()
+                
             } else {
                 self.delegate.sessionTimeLeftChanged(secondsLeft: secondsLeft)
             }

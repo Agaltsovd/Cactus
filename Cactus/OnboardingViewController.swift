@@ -10,7 +10,7 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
     let textArray = ["Next →","Start"]
-    let topTextArray = ["Choose Cactus to Plant","Stay Focused and Productive"]
+    let topTextArray = ["Choose\nCactus\nto Plant","Stay Focused\nand Productive!"]
     let image1 = UIImage(named: "Open Doodles")!
     let image2 = UIImage(named: "plant")!
     let image3 = UIImage(named: "onboarding_stay")!
@@ -20,6 +20,7 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var imageVIew: UIImageView!
     
     @IBOutlet weak var varButton: UIButton!
+    
     
     var count:Int = 0
     
@@ -38,14 +39,15 @@ class OnboardingViewController: UIViewController {
             var nextController: SessionViewController
             nextController = storyboard?.instantiateViewController(identifier: "SessionViewController") as! SessionViewController
             nextController.modalPresentationStyle = .fullScreen
-            present(nextController, animated: true, completion: nil)
+            performSegue(withIdentifier: "showSession", sender: nil)
         }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         varButton.layer.cornerRadius = 14
         varButton.layer.masksToBounds = true
        

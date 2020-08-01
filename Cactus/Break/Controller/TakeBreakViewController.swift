@@ -59,7 +59,9 @@ class TakeBreakViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     @IBAction func didTapFinishBreak() {
+        
         breakManager.cancelBreak()
+       
     }
     
     
