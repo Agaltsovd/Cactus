@@ -33,13 +33,13 @@ class SessionViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     
     lazy var sessionManager = SessionManager(delegate: self)
-
+    var finishedSession: Session?
     @IBAction func buttonPlant() {
 //        performSegue(withIdentifier: "takeBreakSegue", sender: nil)
         let selectedPickerRow = pickerView.selectedRow(inComponent: 0)
         let selectedDuration = durations[selectedPickerRow]
         
-        let session = Session(durationInSeconds: selectedDuration, startDate: Date())
+        let session = Session(durationInSeconds: selectedDuration, startDate: Date(), cactus: CactusesStorage.shared.selectedCactus)
         sessionManager.startSession(session: session)
         sessionManager.cancelPlanting(session: session)
         
@@ -55,6 +55,7 @@ class SessionViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         cactusImage.layer.cornerRadius = cactusImage.frame.width/2
         cactusImage.layer.masksToBounds = true
         
+        
         plantButton.layer.cornerRadius = 14
         plantButton.layer.masksToBounds = true
         
@@ -66,6 +67,7 @@ class SessionViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         giveUpButton.layer.cornerRadius = 14
         giveUpButton.layer.masksToBounds = true
         
+        NotificationCenter.default.addObserver(self, selector: #selector(didSelectCactus), name: NSNotification.Name(rawValue: "cactus_was_selected"), object: nil)
         
         
     }
@@ -150,6 +152,7 @@ class SessionViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func sessionDidEnd(session: Session) {
+        finishedSession = session
         performSegue(withIdentifier: "takeBreakSegue", sender: nil)
         pickerView.isHidden = false
         plantButton.isHidden = false
@@ -167,6 +170,16 @@ class SessionViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         giveUpButton.isHidden = true
         timeLabel.isHidden = true
         cancelButton.isHidden = true
+    }
+    
+    @objc func didSelectCactus(){
+        cactusImage.image = UIImage(named: CactusesStorage.shared.selectedCactus.imageName)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if let destination = segue.destination as? TakeBreakViewController{
+            destination.finishedSession = finishedSession
+        }
     }
 
 }

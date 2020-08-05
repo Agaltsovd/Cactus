@@ -26,6 +26,7 @@ class LeaderboardTableViewCell: UITableViewCell {
     }
     func configure(with leader: Leader){
         let numberOnBoard = Int(LeadersStorage.shared.leaders.firstIndex{$0===leader}!)+1
+        
         numberLabel.text = String(numberOnBoard)
         if numberOnBoard<=3{
             numberLabel.textColor = UIColor(named: "secondaryColor")
@@ -34,7 +35,7 @@ class LeaderboardTableViewCell: UITableViewCell {
             numberLabel.textColor = UIColor(named: "greyColor")
         }
         numberLabel.text = String(numberOnBoard)
-        hoursLabel.text = String(leader.hoursCount)
+        hoursLabel.text = String(Int(leader.totalFocusTimeInMinutes/60))
         nameLabel.text = String(leader.name)
         
     }

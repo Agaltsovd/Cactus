@@ -28,12 +28,15 @@ class LeaderboardViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let leaderCell = tableView.dequeueReusableCell(withIdentifier: "leaderboard_cell", for: indexPath) as! LeaderboardTableViewCell
-        
         let leader = LeadersStorage.shared.leaders[indexPath.row]
         leaderCell.configure(with: leader)
         
         return leaderCell
         
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "showLeader", sender: nil)
     }
     
 

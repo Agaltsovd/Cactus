@@ -28,6 +28,17 @@
 		2D96C65224D001C700D5A78D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D96C65024D001C700D5A78D /* LaunchScreen.storyboard */; };
 		2DB1B22F24D1882300D2D6BC /* Break.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1B22E24D1882300D2D6BC /* Break.swift */; };
 		2DB1B23124D1883A00D2D6BC /* BreakManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1B23024D1883A00D2D6BC /* BreakManager.swift */; };
+		2DD2FB5624D7BF2300BB64EA /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2FB5524D7BF2300BB64EA /* Article.swift */; };
+		2DD2FB5824D7BF4700BB64EA /* ArticleStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2FB5724D7BF4700BB64EA /* ArticleStorage.swift */; };
+		2DD2FB5C24D80DDB00BB64EA /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2FB5B24D80DDB00BB64EA /* LearnViewController.swift */; };
+		2DD2FB5E24D80E2700BB64EA /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2FB5D24D80E2700BB64EA /* ArticleCollectionViewCell.swift */; };
+		2DD2FB6124D831BA00BB64EA /* CactusShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2FB6024D831BA00BB64EA /* CactusShopViewController.swift */; };
+		2DD2FB6624D8326F00BB64EA /* Cactus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2FB6524D8326F00BB64EA /* Cactus.swift */; };
+		2DD2FB6824D8328A00BB64EA /* CactusStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2FB6724D8328A00BB64EA /* CactusStorage.swift */; };
+		2DD2FB6A24D83E9A00BB64EA /* CactusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2FB6924D83E9A00BB64EA /* CactusCollectionViewCell.swift */; };
+		2DD2FB6C24D9AFA700BB64EA /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2FB6B24D9AFA700BB64EA /* Author.swift */; };
+		2DD2FB6E24D9B05200BB64EA /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2FB6D24D9B05200BB64EA /* ArticleViewController.swift */; };
+		2DD2FB7324D9DA1400BB64EA /* LeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2FB7224D9DA1400BB64EA /* LeaderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +65,17 @@
 		2D96C65324D001C700D5A78D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DB1B22E24D1882300D2D6BC /* Break.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Break.swift; sourceTree = "<group>"; };
 		2DB1B23024D1883A00D2D6BC /* BreakManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakManager.swift; sourceTree = "<group>"; };
+		2DD2FB5524D7BF2300BB64EA /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		2DD2FB5724D7BF4700BB64EA /* ArticleStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStorage.swift; sourceTree = "<group>"; };
+		2DD2FB5B24D80DDB00BB64EA /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
+		2DD2FB5D24D80E2700BB64EA /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
+		2DD2FB6024D831BA00BB64EA /* CactusShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CactusShopViewController.swift; sourceTree = "<group>"; };
+		2DD2FB6524D8326F00BB64EA /* Cactus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cactus.swift; sourceTree = "<group>"; };
+		2DD2FB6724D8328A00BB64EA /* CactusStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CactusStorage.swift; sourceTree = "<group>"; };
+		2DD2FB6924D83E9A00BB64EA /* CactusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CactusCollectionViewCell.swift; sourceTree = "<group>"; };
+		2DD2FB6B24D9AFA700BB64EA /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		2DD2FB6D24D9B05200BB64EA /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		2DD2FB7224D9DA1400BB64EA /* LeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +137,9 @@
 		2D5613E224D5826B00B316CB /* Leaderboard */ = {
 			isa = PBXGroup;
 			children = (
-				2D5613E324D5837500B316CB /* LeaderboardViewController.swift */,
-				2D5613E524D583B800B316CB /* LeaderboardTableViewCell.swift */,
-				2D5613E724D583D300B316CB /* Leader.swift */,
-				2D5613E924D583EC00B316CB /* LeadersStorage.swift */,
+				2DD2FB7124D9D97A00BB64EA /* Controller */,
+				2DD2FB7024D9D96F00BB64EA /* Model */,
+				2DD2FB6F24D9D95A00BB64EA /* View */,
 			);
 			path = Leaderboard;
 			sourceTree = "<group>";
@@ -142,6 +163,8 @@
 		2D96C64424D001C400D5A78D /* Cactus */ = {
 			isa = PBXGroup;
 			children = (
+				2DD2FB5F24D8318D00BB64EA /* CactusShop */,
+				2DD2FB5124D7BEA300BB64EA /* Learn */,
 				2D5613E224D5826B00B316CB /* Leaderboard */,
 				2D5613DB24D54FBC00B316CB /* SessionsList */,
 				2D5613D824D54C4300B316CB /* Tab Bar */,
@@ -180,6 +203,104 @@
 			isa = PBXGroup;
 			children = (
 				2D86897A24D017760033E026 /* TakeBreakViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2DD2FB5124D7BEA300BB64EA /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2FB5424D7BF1300BB64EA /* Model */,
+				2DD2FB5324D7BEF900BB64EA /* View */,
+				2DD2FB5224D7BEBA00BB64EA /* Controller */,
+			);
+			path = Learn;
+			sourceTree = "<group>";
+		};
+		2DD2FB5224D7BEBA00BB64EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2FB5B24D80DDB00BB64EA /* LearnViewController.swift */,
+				2DD2FB6D24D9B05200BB64EA /* ArticleViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2DD2FB5324D7BEF900BB64EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2FB5D24D80E2700BB64EA /* ArticleCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DD2FB5424D7BF1300BB64EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2FB5524D7BF2300BB64EA /* Article.swift */,
+				2DD2FB5724D7BF4700BB64EA /* ArticleStorage.swift */,
+				2DD2FB6B24D9AFA700BB64EA /* Author.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DD2FB5F24D8318D00BB64EA /* CactusShop */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2FB6424D8321200BB64EA /* Model */,
+				2DD2FB6324D8320600BB64EA /* View */,
+				2DD2FB6224D831FB00BB64EA /* Controller */,
+			);
+			path = CactusShop;
+			sourceTree = "<group>";
+		};
+		2DD2FB6224D831FB00BB64EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2FB6024D831BA00BB64EA /* CactusShopViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2DD2FB6324D8320600BB64EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2FB6924D83E9A00BB64EA /* CactusCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DD2FB6424D8321200BB64EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2FB6524D8326F00BB64EA /* Cactus.swift */,
+				2DD2FB6724D8328A00BB64EA /* CactusStorage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DD2FB6F24D9D95A00BB64EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D5613E524D583B800B316CB /* LeaderboardTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DD2FB7024D9D96F00BB64EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D5613E724D583D300B316CB /* Leader.swift */,
+				2D5613E924D583EC00B316CB /* LeadersStorage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DD2FB7124D9D97A00BB64EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D5613E324D5837500B316CB /* LeaderboardViewController.swift */,
+				2DD2FB7224D9DA1400BB64EA /* LeaderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,20 +378,31 @@
 			files = (
 				2D5613EA24D583EC00B316CB /* LeadersStorage.swift in Sources */,
 				2D96C64A24D001C400D5A78D /* SessionViewController.swift in Sources */,
+				2DD2FB6824D8328A00BB64EA /* CactusStorage.swift in Sources */,
+				2DD2FB6C24D9AFA700BB64EA /* Author.swift in Sources */,
 				2D5613E624D583B800B316CB /* LeaderboardTableViewCell.swift in Sources */,
 				2D00CEBD24D175040098B8E1 /* CountdownTimer.swift in Sources */,
 				2D86897B24D017760033E026 /* TakeBreakViewController.swift in Sources */,
 				2D5613E824D583D300B316CB /* Leader.swift in Sources */,
 				2D5613DA24D54D0F00B316CB /* CactusTabBarController.swift in Sources */,
+				2DD2FB6E24D9B05200BB64EA /* ArticleViewController.swift in Sources */,
+				2DD2FB6124D831BA00BB64EA /* CactusShopViewController.swift in Sources */,
+				2DD2FB5E24D80E2700BB64EA /* ArticleCollectionViewCell.swift in Sources */,
 				2D5613E124D5647C00B316CB /* SessionsListTableViewCell.swift in Sources */,
+				2DD2FB6624D8326F00BB64EA /* Cactus.swift in Sources */,
 				2D00CEB724D173C50098B8E1 /* Session.swift in Sources */,
+				2DD2FB7324D9DA1400BB64EA /* LeaderViewController.swift in Sources */,
 				2DB1B22F24D1882300D2D6BC /* Break.swift in Sources */,
 				2D5613E424D5837500B316CB /* LeaderboardViewController.swift in Sources */,
+				2DD2FB5624D7BF2300BB64EA /* Article.swift in Sources */,
+				2DD2FB5824D7BF4700BB64EA /* ArticleStorage.swift in Sources */,
 				2D5613DF24D5512700B316CB /* SessionsStorage.swift in Sources */,
+				2DD2FB5C24D80DDB00BB64EA /* LearnViewController.swift in Sources */,
 				2DB1B23124D1883A00D2D6BC /* BreakManager.swift in Sources */,
 				2D86897D24D022140033E026 /* OnboardingViewController.swift in Sources */,
 				2D96C64624D001C400D5A78D /* AppDelegate.swift in Sources */,
 				2D5613DD24D5503000B316CB /* SessionListViewController.swift in Sources */,
+				2DD2FB6A24D83E9A00BB64EA /* CactusCollectionViewCell.swift in Sources */,
 				2D96C64824D001C400D5A78D /* SceneDelegate.swift in Sources */,
 				2D00CEB924D1745C0098B8E1 /* SessionManager.swift in Sources */,
 			);

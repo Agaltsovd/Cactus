@@ -29,6 +29,7 @@ class TakeBreakViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var topLabel: UILabel!
     
+    var finishedSession: Session!
     lazy var breakManager = BreakManager(delegate: self)
     
     
@@ -39,6 +40,7 @@ class TakeBreakViewController: UIViewController, UIPickerViewDataSource, UIPicke
 
         takeBreakButton.layer.cornerRadius = 14
         takeBreakButton.layer.masksToBounds = true
+        cactusImage.image = UIImage(named: finishedSession.cactus.imageName)
         
         finishBreakButton.layer.cornerRadius = 14
         finishBreakButton.layer.masksToBounds = true
